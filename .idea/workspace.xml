@@ -10,6 +10,9 @@
   <component name="ComposerSettings">
     <execution />
   </component>
+  <component name="Git.Merge.Settings">
+    <option name="BRANCH" value="origin/main" />
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
@@ -26,11 +29,18 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "/home/developer/PhpstormProjects/code-examples",
+    "last_opened_file_path": "/var/www/code-examples",
     "nodejs_package_manager_path": "npm",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/gyumri-brand-shop/src" />
+      <recent name="$PROJECT_DIR$/gyumri-brand-shop/public" />
+      <recent name="$PROJECT_DIR$/gyumri-brand-shop" />
+    </key>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -40,6 +50,7 @@
       <option name="presentableId" value="Default" />
       <updated>1665033659112</updated>
       <workItem from="1665033660908" duration="136000" />
+      <workItem from="1666810255992" duration="1932000" />
     </task>
     <servers />
   </component>
