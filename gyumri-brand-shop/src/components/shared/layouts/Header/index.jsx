@@ -1,9 +1,22 @@
+import { useState } from 'react';
 import { Link } from 'react-router-dom';
+import { getAuth, onAuthStateChanged } from 'firebase/auth';
 
 // Images
 import logo from 'assets/images/home/logo.png'
 
+
 const Header = () => {
+    const auth = getAuth();
+    const [isLoggedIn, setIsLoggedIn] = useState(false)
+
+    const handleSignOut = () => {
+        auth.signOut()
+    };
+
+    onAuthStateChanged(auth, authUser => {
+        setIsLoggedIn(!!authUser)
+    })
 
     return (
         <header className="text-gray-600 body-font bg-purple-200">
@@ -14,8 +27,14 @@ const Header = () => {
                 </Link>
 
                 <nav className="md:ml-auto flex flex-wrap items-center text-base justify-center">
-                    <Link to="/sign-up" className="mr-5 hover:text-gray-900">Sign up</Link>
-                    <Link to="/sign-in" className="mr-5 hover:text-gray-900">Sign in</Link>
+                    {!isLoggedIn ? (
+                        <>
+                            <Link to="/sign-up" className="mr-5 hover:text-gray-900">Sign up</Link>
+                            <Link to="/sign-in" className="mr-5 hover:text-gray-900">Sign in</Link>
+                        </>
+                    ) : (
+                        <Link to="/" onClick={handleSignOut} className="mr-5 hover:text-gray-900">Log out</Link>
+                    )}
                 </nav>
             </div>
         </header>

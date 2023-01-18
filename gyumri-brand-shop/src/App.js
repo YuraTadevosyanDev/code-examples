@@ -8,6 +8,7 @@ import {
     Home,
     Register,
     Login,
+    Profile
 } from './pages';
 
 function App() {
@@ -18,6 +19,7 @@ function App() {
                     <Route path="/" element={<Home />} />
                     <Route path="/sign-up" element={<Register />} />
                     <Route path="/sign-in" element={<Login />} />
+                    <Route path="/profile" element={<Profile />} />
                 </Route>
             </Routes>
         </div>
